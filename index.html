@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trilha da Memória — A Menina sem Nome</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+</head>
+<body>
+<header class="topbar">
+  <div><span class="eyebrow">PROTÓTIPO • TURISMO CEMITERIAL</span><h1>Trilha da Memória</h1></div>
+  <div id="gpsStatus" class="gps">● GPS aguardando</div>
+</header>
+<main>
+  <section class="intro">
+    <div class="intro-text">
+      <span class="tag">PONTO 01 · QUARTEIRÃO 11 · TÚMULO F66</span>
+      <h2>A Menina<br><em>sem Nome</em></h2>
+      <p>Uma experiência fictícia criada para demonstrar como a geolocalização pode aproximar o visitante das histórias e das memórias presentes no espaço cemiterial.</p>
+      <div class="quote">“Nem toda história que merece ser lembrada foi registrada.”</div>
+    </div>
+    <div class="progress-card">
+      <span>SUA TRILHA</span><strong>01 <small>/ 01</small></strong>
+      <div class="progress"><i></i></div><p>Você encontrou o primeiro ponto.</p>
+    </div>
+  </section>
+
+  <section class="map-wrap">
+    <div id="map"></div><div class="map-label">MAPA DO PROTÓTIPO</div>
+    <div id="arrivalBadge" class="arrival hidden"><span>✦</span><div><b>Você chegou a um ponto de memória</b><small>A Menina sem Nome está próxima.</small></div></div>
+  </section>
+
+  <section class="experience">
+    <div class="audio-symbol">🎧</div>
+    <div class="experience-content">
+      <span class="tag">NARRATIVA</span><h3>A Menina sem Nome</h3><div class="location-tag">📍 Quarteirão 11 · Túmulo F66</div>
+      <p id="distanceText">Ative a localização para experimentar o funcionamento por proximidade.</p>
+      <button id="audioButton">▶ Ouvir a narrativa</button>
+      <audio id="audioPlayer" controls preload="none"><source src="audio/menina-sem-nome.wav" type="audio/mpeg"></audio>
+      <details><summary>Sobre esta experiência</summary><p>Esta personagem é fictícia e foi criada exclusivamente para o protótipo. A proposta utiliza narrativa interpretativa para discutir memória, anonimato e patrimônio cemiterial.</p></details>
+    </div>
+  </section>
+
+  <section class="story">
+    <span class="tag">INTERPRETAÇÃO DO PATRIMÔNIO</span>
+    <h3>Quem fica na memória?</h3>
+    <p>Cemitérios também são espaços de memória. Seus monumentos, inscrições, fotografias, flores e trajetórias podem revelar diferentes formas de lembrar e esquecer. Nesta experiência, a Menina sem Nome representa simbolicamente as histórias que não chegaram aos grandes registros.</p>
+    <div class="question"><span>UMA PERGUNTA PARA O VISITANTE</span><strong>Se o nome desaparece, a história também desaparece?</strong></div>
+  </section>
+
+  <section class="next"><div><span class="tag">PRÓXIMA ETAPA</span><h3>Imagine uma trilha pelo Santo Amaro</h3><p>O próximo passo é transformar o Quarteirão 11 / Túmulo F66 em um ponto georreferenciado real. Depois, outros pontos poderiam ser adicionados: personalidades, túmulos históricos, elementos arquitetônicos e histórias de memória social.</p></div><div class="fake-points"><span>02</span><span>03</span><span>04</span></div></section>
+<section class="technical-note"><b>Nota técnica:</b> a planta fornecida identifica o cemitério e sua organização espacial, mas não apresenta latitude/longitude. Por isso, a coordenada do mapa continua provisória até ser coletada e conferida no QGIS.</section></main>
+<footer>Protótipo acadêmico · Georreferenciamento + narrativa sonora + interpretação patrimonial</footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="script.js"></script>
+</body>
+</html>
